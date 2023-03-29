@@ -90,7 +90,7 @@ if __name__ == '__main__':
 
     bob.pencolor('red')
     bob.fillcolor("blue")
- 
+    bob.begin_fill()
 
     square(bob, radius)
     bob.end_fill()
