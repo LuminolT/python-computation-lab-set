@@ -76,7 +76,7 @@ def circle(t, r):
 if __name__ == '__main__':
     bob = turtle.Turtle()
     bob.width(3)
-    bob.begin_fill()
+    
     # draw a circle centered on the origin
     radius = 100
     bob.pu()

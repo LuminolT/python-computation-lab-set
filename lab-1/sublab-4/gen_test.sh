@@ -1,0 +1,8 @@
+python -u "./lab-1/sublab-4/text_generator.py" -l 5    -s './lab-1/sublab-4/benchmark_texts/5.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 10   -s './lab-1/sublab-4/benchmark_texts/10.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 15   -s './lab-1/sublab-4/benchmark_texts/15.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 20   -s './lab-1/sublab-4/benchmark_texts/20.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 1000    -s './lab-1/sublab-4/benchmark_texts/1k.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 10000   -s './lab-1/sublab-4/benchmark_texts/10k.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 100000  -s './lab-1/sublab-4/benchmark_texts/100k.txt'
+python -u "./lab-1/sublab-4/text_generator.py" -l 1000000 -s './lab-1/sublab-4/benchmark_texts/1000k.txt'
