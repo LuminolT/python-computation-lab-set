@@ -17,11 +17,12 @@
 ## Structure
 
 ```
-lab-1
-├── sublab-1
-├── sublab-2
-├── sublab-3
-└── sublab-4
+├──lab-[#number]
+|  ├── sublab-1
+|  ├── sublab-2
+|  ├── sublab-3
+|  └── sublab-4
+└──sec-seminar
 ```
 
 ## Contribute
