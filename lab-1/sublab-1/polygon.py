@@ -76,12 +76,12 @@ def circle(t, r):
 if __name__ == '__main__':
     bob = turtle.Turtle()
     bob.width(3)
-
+    
     # draw a circle centered on the origin
     radius = 100
-    # bob.pu()
-    bob.pd()
-    bob.fd(radius)
+    bob.pu()
+    # bob.fd(radius)
+    bob.goto(radius, 0)
     bob.lt(90)
     bob.pd()
     circle(bob, radius)
@@ -94,7 +94,7 @@ if __name__ == '__main__':
 
     square(bob, radius)
     bob.end_fill()
-    bob.speed(100000)
+    bob.speed(10)
     polygon(bob, 8, radius)
 
     # wait for the user to close the window
