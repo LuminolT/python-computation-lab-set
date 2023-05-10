@@ -18,24 +18,24 @@ def retrieveRandomWord(wordList):
 
 
 def buildWordDict(text, n):
-    # 剔除换行符和引号
     text = text.replace("\n", " ")
     text = text.replace("\"", "")
-    text = text.replace("--", "")
-    # 保证每个标点符号都和前面的单词在一起
-    # 这样不会被剔除，保留在马尔科夫链中
-    punctuation = [',', '.', ';', ':']
+    text = text.replace("--", " ")
+    text = text.replace("_", "")
+    text = text.replace("`", "")
+    text = text.replace("\'", "")
+
+    punctuation = [',', '.', ';', ':', '!', '?']
     for symbol in punctuation:
         text = text.replace(symbol, " "+symbol+" ")
     words = text.split(" ")
-    # 过滤空单词
+
     words = [word for word in words if word != ""]
 
     wordDict = {}
     for i in range(n, len(words)):
         word = ' '.join(words[i-n:i])
         if word not in wordDict:
-            # 为单词新建一个字典
             wordDict[word] = {}
         if words[i] not in wordDict[word]:
             wordDict[word][words[i]] = 0
@@ -44,16 +44,13 @@ def buildWordDict(text, n):
 
 
 def Markov_chain(n, m):
-    with open(r'./lab-3/sublab-3/emma.txt', 'r', encoding='utf-8') as fileIn, open(r'testemma.txt', 'w', encoding='utf-8') as fileOUt:
+    with open(r'lab-3/sublab-3/emma.txt', 'r', encoding='utf-8') as fileIn, open(r'testemma.txt', 'w', encoding='utf-8') as fileOUt:
         text = fileIn.read()
         wordDict = buildWordDict(text, n)
         OutsetList = []
         for key in wordDict.keys():
             if key[0].isupper():
                 OutsetList.append(key)
-        # 生成链长为100的马尔科夫链
-        # print(wordDict)
-        # fileOUt.write(str(wordDict))
         s = 0
         chain = []
         prefix = choice(OutsetList)
