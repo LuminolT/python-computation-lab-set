@@ -24,4 +24,4 @@ def ackermann(m: int, n: int) -> int:
         return ackermann(m-1, ackermann(m, n-1))
 
 
-print(ackermann(4, 1))
+print(ackermann(3, 4))
